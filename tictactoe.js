@@ -32,10 +32,9 @@ horizontalWin = () => {
 }
 
 verticalWin = () => {
-    for (i = 0; i < 9; i = i + 3) {
+    for (i = 0; i < 9; i = i + 1) {
         if ((board[i] == 'X' && board[i + 3] == 'X' && board[i + 6] == 'X') ||
-            ((board[i] == 'O' && board[i + 3] == 'O' && board[i + 6] == 'O'))
-        ) {
+            (board[i] == 'O' && board[i + 3] == 'O' && board[i + 6] == 'O')) {
             console.log(`won vertically`);
             process.exit()
         }
